@@ -105,6 +105,7 @@
             gap: 20px;
             margin: 20px auto;
             width: 80%;
+            flex-wrap: wrap;
         }
 
         .button {
@@ -119,6 +120,9 @@
             transition: background-color 0.3s, transform 0.2s;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1 1 auto;
+            max-width: 200px;
+            margin: 10px;
         }
 
         .button:hover {
@@ -223,15 +227,61 @@
         }
 
         /* Responsive Adjustments */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.3rem;
+            }
+
+            .menu-section {
+                padding: 20px;
+            }
+
+            .menu-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .menu-item .name, .menu-item .price {
+                font-size: 1rem;
+            }
+
+            .preparation-time, .contact, .button-group {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
             header h1 {
                 font-size: 2rem;
             }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .preparation-time h3, .contact, .button-group .button {
+                font-size: 1rem;
+            }
+
+            .menu-section h2 {
+                font-size: 1.4rem;
+            }
+
             .menu-item {
                 flex-direction: column;
                 text-align: center;
+                padding: 15px;
             }
+
             .menu-item .name, .menu-item .price {
+                font-size: 1rem;
+            }
+
+            .button {
+                padding: 10px 20px;
                 font-size: 1rem;
             }
         }
@@ -255,7 +305,7 @@
 <!-- Button Group with Call and Map Buttons -->
 <div class="button-group">
     <a href="tel:+919392746199" class="button">Call Us Now</a>
-    <a href="https://maps.app.goo.gl/yj1sFxwqgWZStv4VA" class="button" target="_blank">Find Us on Google Maps</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Nagpur+Rd,+Bapat+Nagar,+Postman+Colony,+Wadgaon,+Chandrapur,+Maharashtra+442401,+India" class="button" target="_blank">Find Us on Google Maps</a>
 </div>
 
 <div class="container">
